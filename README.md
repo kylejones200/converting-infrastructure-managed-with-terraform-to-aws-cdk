@@ -1,7 +1,7 @@
 # Converting Infrastructure managed with Terraform to AWS CDK
 
-**Published:** 2024-10-18
-**Medium:** [https://medium.com/@kyle-t-jones/converting-infrastructure-managed-with-terraform-to-aws-cdk-f2c012288f48](https://medium.com/@kyle-t-jones/converting-infrastructure-managed-with-terraform-to-aws-cdk-f2c012288f48)
+Published: 2024-10-18
+Medium: [https://medium.com/@kyle-t-jones/converting-infrastructure-managed-with-terraform-to-aws-cdk-f2c012288f48](https://medium.com/@kyle-t-jones/converting-infrastructure-managed-with-terraform-to-aws-cdk-f2c012288f48)
 
 ## About
 

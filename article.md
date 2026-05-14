@@ -18,9 +18,9 @@ Terraform defines infrastructure using its language, HCL (HashiCorp Configuratio
 
 There are several reasons an organization might migrate from Terraform to CDK
 
-**AWS-Specific Features:** CDK often provides better support for AWS-specific features and services. For teams heavily invested in AWS, CDK's native integration can simplify development and deployment.
+AWS-Specific Features: CDK often provides better support for AWS-specific features and services. For teams heavily invested in AWS, CDK's native integration can simplify development and deployment.
 
-**Programming Flexibility:** While Terraform's HCL is a capable language, it doesn't offer the full power of traditional programming languages like TypeScript or Python. CDK allows you to write more dynamic and reusable code.
+Programming Flexibility: While Terraform's HCL is a capable language, it doesn't offer the full power of traditional programming languages like TypeScript or Python. CDK allows you to write more dynamic and reusable code.
 
 #### Migrating a Simple Terraform Resource to CDK
 Let's start with an example where Terraform provisions an S3 bucket with versioning enabled:
@@ -60,7 +60,7 @@ One of the main challenges in migrating from Terraform to CDK is handling the st
 
 To migrate infrastructure that's already deployed with Terraform, you may need to
 
-Import existing resources into CDK**:** CDK supports resource importing, which allows you to bring existing infrastructure under CDK management without recreating the resources. You can use the cdk import command to import the state of existing resources.
+Import existing resources into CDK: CDK supports resource importing, which allows you to bring existing infrastructure under CDK management without recreating the resources. You can use the cdk import command to import the state of existing resources.
 
 #### Automating the Migration Process
 No tool exists that directly converts Terraform configuration files into CDK constructs. Therefore, migration from Terraform to CDK usually involves manually rewriting the code. However, tools like Terraformer can help generate a Terraform state file from existing infrastructure, which can then be used to guide the CDK migration process.
@@ -78,9 +78,9 @@ Once you have a complete picture of the infrastructure, prioritize which resourc
 #### Breaking Down the Migration
 It's crucial to break the migration down into manageable phases for large-scale applications. Trying to migrate everything simultaneously increases the risk of something going wrong and makes troubleshooting more difficult. A common strategy is to group resources by service type (e.g., databases, compute, storage) or environment (e.g., staging, production).
 
-1.  [**Storage Resources (S3, RDS, DynamoDB)** Begin with relatively static resources like databases or object storage. These services often don't change frequently, which reduces the risk of disruption.]
-2.  [**Compute Resources (EC2, Lambda)** Next, migrate your compute resources, including any EC2 instances, Auto Scaling groups, and Lambda functions. This may require re-architecting parts of your application to ensure compatibility with CDK's patterns.]
-3.  [**Networking and Security (VPC, Security Groups, Load Balancers)** Once the core components are in place, move on to networking resources like VPCs, subnets, security groups, and load balancers. Ensure that all connections between resources remain intact.]
+1.  [Storage Resources (S3, RDS, DynamoDB) Begin with relatively static resources like databases or object storage. These services often don't change frequently, which reduces the risk of disruption.]
+2.  [Compute Resources (EC2, Lambda) Next, migrate your compute resources, including any EC2 instances, Auto Scaling groups, and Lambda functions. This may require re-architecting parts of your application to ensure compatibility with CDK's patterns.]
+3.  [Networking and Security (VPC, Security Groups, Load Balancers) Once the core components are in place, move on to networking resources like VPCs, subnets, security groups, and load balancers. Ensure that all connections between resources remain intact.]
 
 #### Testing and Validation
 Thoroughly test the new infrastructure before each phase is completed. This should include functional testing (to ensure the application works as expected) and performance testing (to ensure the new setup performs well under load).
