@@ -11,14 +11,7 @@ But sometimes teams want to move from Terraform to CDK and my goal here is to he
 
 Terraform defines infrastructure using its language, HCL (HashiCorp Configuration Language). Like CloudFormation, it is declarative and operates across multiple cloud providers. AWS CDK, on the other hand, is primarily focused on AWS services and allows infrastructure to be defined imperatively in a programming language.
 
-## About
 
-Place the code for this article in this repository.
-The original article export is saved as `article.md`.
-
-## Files
-
-Add your `.ipynb`, `.py`, `.yaml`, `.js`, `.ts`, or other project files here.
 
 ## Disclaimer
 
